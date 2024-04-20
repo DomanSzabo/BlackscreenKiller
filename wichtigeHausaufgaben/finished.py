@@ -1,9 +1,12 @@
 import psutil
 import subprocess
 import keyboard
+import win32gui
+import time
 
 
 fake_blackscreen_path = "math/presentation.exe"
+fake_py_blackscreen_path = "math/presentation(py).py"
 control_panel_path = "math/controlPanel.py"
 program_name = "notepad.exe"
 control_panel_shortcut = "ctrl + shift + w"
