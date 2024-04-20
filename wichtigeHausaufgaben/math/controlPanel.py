@@ -12,8 +12,6 @@ class ControlPanel(tk.Tk):
 
         # Define your .bat scripts and corresponding commands
         self.scripts = {
-            "Script 1": "script1.bat",
-            "Script 2": "script2.bat",
             "Enter Blackscreen": "presentation.exe",
             # Add more scripts as needed
         }
