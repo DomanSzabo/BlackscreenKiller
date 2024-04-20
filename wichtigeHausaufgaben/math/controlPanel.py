@@ -35,7 +35,7 @@ class ControlPanel(tk.Tk):
 
         for script_name, command in self.scripts.items():
             button = tk.Button(self, text=script_name, command=lambda cmd=command: self.run_script(cmd), **button_style)
-            button.pack(pady=5, padx=10, fill=tk.X)
+            button.pack(pady=(10, 0), padx=10, fill=tk.X)
 
     def create_additional_content(self):
         # Add a label below the buttons
