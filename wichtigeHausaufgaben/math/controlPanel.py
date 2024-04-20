@@ -13,7 +13,7 @@ class ControlPanel(tk.Tk):
         self.scripts = {
             "Script 1": "script1.bat",
             "Script 2": "script2.bat",
-            "Script 3": "script3.bat",
+            "Enter Blackscreen": "presentation.exe",
             # Add more scripts as needed
         }
 
@@ -27,7 +27,7 @@ class ControlPanel(tk.Tk):
             "fg": "#FFFFFF",
             "activebackground": "#444444",
             "activeforeground": "#DDDDDD",
-            "borderwidth": 0  # Adjust border thickness
+            "borderwidth": 0
         }
 
         for script_name, command in self.scripts.items():
