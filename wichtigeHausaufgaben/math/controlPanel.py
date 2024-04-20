@@ -19,6 +19,7 @@ class ControlPanel(tk.Tk):
         }
 
         self.create_buttons()
+        self.create_additional_content()
         self.bind("<Escape>", lambda event: self.destroy())
 
     def create_buttons(self):
@@ -35,6 +36,11 @@ class ControlPanel(tk.Tk):
         for script_name, command in self.scripts.items():
             button = tk.Button(self, text=script_name, command=lambda cmd=command: self.run_script(cmd), **button_style)
             button.pack(pady=5, padx=10, fill=tk.X)
+
+    def create_additional_content(self):
+        # Add a label below the buttons
+        label = tk.Label(self, text="Press the escape key to exit control Panel. \n Drücke die Escape Taste um Control Panel zu beenden.", bg="#222222", fg="white", font=("Arial", 10))
+        label.pack(pady=10)
 
     def run_script(self, command):
         try:
