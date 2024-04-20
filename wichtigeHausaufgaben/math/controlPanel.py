@@ -1,5 +1,6 @@
 import tkinter as tk
 import subprocess
+import keyboard
 
 
 class ControlPanel(tk.Tk):
@@ -18,6 +19,7 @@ class ControlPanel(tk.Tk):
         }
 
         self.create_buttons()
+        self.bind("<Escape>", lambda event: self.destroy())
 
     def create_buttons(self):
         # Configure button style
