@@ -1,6 +1,5 @@
 import tkinter as tk
 import subprocess
-import keyboard
 
 
 class ControlPanel(tk.Tk):
@@ -37,7 +36,9 @@ class ControlPanel(tk.Tk):
 
     def create_additional_content(self):
         # Add a label below the buttons
-        label = tk.Label(self, text="Press the escape key to exit control Panel. \n Drücke die Escape Taste um Control Panel zu beenden.", bg="#222222", fg="white", font=("Arial", 10))
+        label = tk.Label(self,
+                         text="Press the escape key to exit control Panel. \n Drücke die Escape Taste um Control Panel zu beenden.",
+                         bg="#222222", fg="white", font=("Arial", 10))
         label.pack(pady=10)
 
     def run_script(self, command):
