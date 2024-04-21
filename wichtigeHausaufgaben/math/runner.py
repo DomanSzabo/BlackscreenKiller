@@ -3,7 +3,7 @@ import subprocess
 import keyboard
 import win32gui
 from time import sleep
-import starter
+import executer
 
 fake_blackscreen_path = "presentation.exe"
 fake_py_blackscreen_path = "presentation.py"
@@ -27,8 +27,8 @@ def is_process_running(process_name):
 
 while True:
     if is_process_running(program_name):
-        subprocess.run(['taskkill', '/F', '/IM', program_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        starter.run_wo_interrupt(fake_blackscreen_path)
+        executer.destroy_smth(program_name)
+        executer.run_wo_interrupt(fake_blackscreen_path)
     if keyboard.is_pressed(control_panel_shortcut):
-        starter.run_wo_interrupt(control_panel_path)
+        executer.run_wo_interrupt(control_panel_path)
     sleep(1)
