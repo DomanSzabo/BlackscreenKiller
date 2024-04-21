@@ -9,7 +9,7 @@ fake_blackscreen_exe_path = "presentation.exe"
 fake_blackscreen_py_path = "presentation.py"
 control_panel_py_path = "controlPanel.py"
 control_panel_exe_path = "controlPanel.exe"
-program_name = "notepad.exe"
+program_name = "nfscblcr.exe"
 control_panel_shortcut = "ctrl + shift + w"
 exit_killer_shortcut = "ctrl + shift + q"
 
