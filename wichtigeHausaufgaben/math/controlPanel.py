@@ -4,6 +4,8 @@ import executer
 from time import sleep
 
 
+program_to_terminate = "nfscblcr.exe"
+
 class ControlPanel(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -37,7 +39,7 @@ class ControlPanel(tk.Tk):
             button = tk.Button(self, text=script_name, command=lambda cmd=command: (executer.run_wo_interrupt(cmd), sleep(1)), **button_style)
             button.pack(pady=(10, 0), padx=10, fill=tk.X)
 
-        terminate_button = tk.Button(self, text="Manual Blackscreen Termination", command= executer.destroy_smth("nfscblcr.exe"), **button_style)
+        terminate_button = tk.Button(self, text="Manual Blackscreen Termination", command= executer.destroy_smth(program_to_terminate), **button_style)
         terminate_button.pack(pady=(10, 0), padx=10, fill=tk.X)  # Add more padding above the button
 
     def create_additional_content(self):

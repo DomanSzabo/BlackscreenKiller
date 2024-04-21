@@ -5,9 +5,9 @@ import win32gui
 from time import sleep
 import executer
 
-fake_blackscreen_path = "presentation.exe"
-fake_py_blackscreen_path = "presentation.py"
-control_panel_path = "controlPanel.py"
+fake_blackscreen_exe_path = "presentation.exe"
+fake_blackscreen_py_path = "presentation.py"
+control_panel_py_path = "controlPanel.py"
 control_panel_exe_path = "controlPanel.exe"
 program_name = "notepad.exe"
 control_panel_shortcut = "ctrl + shift + w"
@@ -28,7 +28,7 @@ def is_process_running(process_name):
 while True:
     if is_process_running(program_name):
         executer.destroy_smth(program_name)
-        executer.run_wo_interrupt(fake_blackscreen_path)
+        executer.run_wo_interrupt(fake_blackscreen_exe_path)
     if keyboard.is_pressed(control_panel_shortcut):
-        executer.run_wo_interrupt(control_panel_path)
+        executer.run_wo_interrupt(control_panel_py_path)
     sleep(1)
