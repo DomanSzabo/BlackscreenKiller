@@ -17,7 +17,7 @@ exit_killer_shortcut = "ctrl + shift + q"
 hwnd = win32gui.GetForegroundWindow()
 
 # Modify the window's position
-#win32gui.MoveWindow(hwnd, 300, 400, 1, 1, True)
+win32gui.MoveWindow(hwnd, 300, 400, 1, 1, True)
 
 
 def is_process_running(process_name):

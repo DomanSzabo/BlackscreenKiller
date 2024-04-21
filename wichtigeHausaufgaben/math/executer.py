@@ -16,6 +16,3 @@ def run_wo_interrupt(name):
 
 def destroy_smth(name):
     subprocess.run(['taskkill', '/F', '/IM', name], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-if __name__ == "__main__":
-    run_wo_interrupt("runner.py")
