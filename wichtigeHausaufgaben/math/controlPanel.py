@@ -1,5 +1,7 @@
 import tkinter as tk
 import subprocess
+import starter
+from time import sleep
 
 
 class ControlPanel(tk.Tk):
@@ -12,6 +14,7 @@ class ControlPanel(tk.Tk):
         # Define your .bat scripts and corresponding commands
         self.scripts = {
             "Enter Blackscreen": "presentation.exe",
+            "Start/Restart Killer": "runner.py"
             # Add more scripts as needed
         }
 
@@ -31,7 +34,7 @@ class ControlPanel(tk.Tk):
         }
 
         for script_name, command in self.scripts.items():
-            button = tk.Button(self, text=script_name, command=lambda cmd=command: self.run_script(cmd), **button_style)
+            button = tk.Button(self, text=script_name, command=lambda cmd=command: (starter.run_wo_interrupt(cmd), sleep(1)), **button_style)
             button.pack(pady=(10, 0), padx=10, fill=tk.X)
 
     def create_additional_content(self):
