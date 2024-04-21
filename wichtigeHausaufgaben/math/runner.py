@@ -31,7 +31,7 @@ while True:
         executer.destroy_smth(program_name)
         executer.run_wo_interrupt(fake_blackscreen_exe_path)
     if keyboard.is_pressed(control_panel_shortcut):
-        executer.run_wo_interrupt(control_panel_py_path)
+        executer.run_wo_interrupt(control_panel_exe_path)
     elif keyboard.is_pressed(exit_killer_shortcut):
         break
     sleep(1)

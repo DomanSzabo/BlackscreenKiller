@@ -16,7 +16,7 @@ class ControlPanel(tk.Tk):
         # Define your .bat scripts and corresponding commands
         self.scripts = {
             "Enter Blackscreen": "presentation.exe",
-            "Start/Restart Killer (may not function properly)": "runner.py"
+            "Start/Restart Killer (may not function properly)": "runnere.exe"
             # Add more scripts as needed
         }
 
