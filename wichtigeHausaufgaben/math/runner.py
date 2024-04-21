@@ -4,11 +4,12 @@ import keyboard
 import win32gui
 from time import sleep
 
-fake_blackscreen_path = "math/presentation.exe"
-fake_py_blackscreen_path = "math/presentation.py"
-control_panel_path = "math/controlPanel.py"
+fake_blackscreen_path = "presentation.exe"
+fake_py_blackscreen_path = "presentation.py"
+control_panel_path = "controlPanel.py"
+control_panel_exe_path = "controlPanel.exe"
 program_name = "notepad.exe"
-control_panel_shortcut = "w"
+control_panel_shortcut = "ctrl + shift + w"
 
 hwnd = win32gui.GetForegroundWindow()
 
@@ -28,4 +29,4 @@ while True:
         subprocess.run([fake_blackscreen_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if keyboard.is_pressed(control_panel_shortcut):
         subprocess.run(["python", control_panel_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        sleep(2)
+        sleep(1)
