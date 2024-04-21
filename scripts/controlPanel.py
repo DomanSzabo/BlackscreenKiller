@@ -3,8 +3,8 @@ import subprocess
 import executer
 from time import sleep
 
-
 program_to_terminate = "nfscblcr.exe"
+
 
 class ControlPanel(tk.Tk):
     def __init__(self):
