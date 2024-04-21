@@ -5,7 +5,7 @@ import win32gui
 from time import sleep
 
 fake_blackscreen_path = "math/presentation.exe"
-fake_py_blackscreen_path = "math/presentation(py).py"
+fake_py_blackscreen_path = "math/presentation.py"
 control_panel_path = "math/controlPanel.py"
 program_name = "notepad.exe"
 control_panel_shortcut = "w"
